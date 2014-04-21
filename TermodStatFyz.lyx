@@ -1,0 +1,5679 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{amsthm,amsmath,amssymb,amscd,mathrsfs,url}
+%\usepackage[czech]{babel}
+\usepackage{verbatim}
+\usepackage{showkeys}
+\usepackage{xcolor}
+\usepackage{stackengine}
+\usepackage{lipsum}
+\usepackage{comment}
+%%\usepackage{MNsymbol} NIKDY!
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{marginnote}
+\usepackage{esint}
+\setlength\textwidth{145mm}
+\setlength\textheight{247mm}
+\newcommand{\opdiv}{\mathop{\mathrm{div}}}
+\newcommand{\oprot}{\mathop{\mathrm{rot}}}
+\end_preamble
+\options a4paper,english,czech,12pt
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_title "MyslenkyTermodynamiky"
+\pdf_author "Martin Holi Holecek"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry false
+\use_amsmath 0
+\use_esint 0
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Souhrn myšlenek z termodynamiky
+\end_layout
+
+\begin_layout Standard
+Teplo je neuspořádaný pohyb částic systému.
+\end_layout
+
+\begin_layout Standard
+Termodynamický stav je přesný popis zkoumaného objektu.
+ Pozorované veličiny jsou nutně středované (přez fluktuace).
+\end_layout
+
+\begin_layout Standard
+Makrostav je termodynamický stav, je realizován velkým počtem mikrostavů
+ (které mají ekvivalentní hodnotu termodynamických veličin).
+\end_layout
+
+\begin_layout Standard
+Rozdělovací funkce, střední hodnoty, fluktuující částice, poissnovo rozdělení.
+\end_layout
+
+\begin_layout Paragraph*
+Nultá věta
+\end_layout
+
+\begin_layout Standard
+Systém je v termodynamické rovnováze, pokud jsou pozorovatelné veličiny
+ nezávislé na čase.
+\end_layout
+
+\begin_layout Standard
+Širší formulace - ...pozorovatelné veličiny středované přez fluktuace nezávislé
+ ...
+\end_layout
+
+\begin_layout Standard
+Když se systém vyvíjí - nerovnovážný.
+\end_layout
+
+\begin_layout Standard
+Systém není v rovnováze, pokud v něm tečou toky (částic).
+ Např pro elektronický obvod ano, ale zdroj musí být součástí experimentu.
+\end_layout
+
+\begin_layout Standard
+Systém je v ustáleném stavu, když jsou toky konstantní.
+\end_layout
+
+\begin_layout Standard
+Termodynamickou rovnováhu fixují okrajové podmínky a vnitřní energie.
+\end_layout
+
+\begin_layout Paragraph*
+Přesuny energie a vratnost
+\end_layout
+
+\begin_layout Itemize
+Konáním práce 
+\begin_inset Formula $\delta W$
+\end_inset
+
+.
+ Vratný děj - práci použiju k vrácení se k předchozímu stavu.
+\end_layout
+
+\begin_layout Itemize
+Tokem tepla 
+\begin_inset Formula $\delta Q$
+\end_inset
+
+.
+ Limitně vratný děj - se zvyšujícím se počtem rezervoárů se dá přiblížit
+ blíž původnímu stavu předáváním tepla.
+\end_layout
+
+\begin_layout Itemize
+Disipativní prací (tření).
+ Nevratný.
+ Konáním 
+\begin_inset Formula $\delta W$
+\end_inset
+
+ se získá rovnou 
+\begin_inset Formula $\delta Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+V reálu každý děj obsahuje trochu toho dissipativního.
+\end_layout
+
+\begin_layout Standard
+Adiabatický proces.
+ Teplo přechází vždy mezi nějakými tělesy.
+\end_layout
+
+\begin_layout Standard
+Stavová veličina - veličina termodynamického stavu.
+ Nestavová veličina - veličina nějakého děje.
+\end_layout
+
+\begin_layout Paragraph*
+První termodynamická věta 
+\begin_inset Formula $1VTD$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dE=\delta Q+\delta W
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Princip zachování energie.
+ Systém energii ztrácí/získává pouze konáním práce nebo tokem tepla, pro
+ konání práce platí:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\delta W=-pdV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Druhá termodynamická věta (tvar s přechodem tepla)
+\end_layout
+
+\begin_layout Standard
+Neexistuje proces, při kterém by přecházelo teplo z tělesa chladnějšího
+ na teplejší, aniž by zbytek světa zůstal nezměněn.
+\end_layout
+
+\begin_layout Paragraph*
+Kvantová mechanika
+\end_layout
+
+\begin_layout Standard
+Vlastní stavy a měřitelné hodnoty jsou vlastní vektory a vlastní čísla.
+\end_layout
+
+\begin_layout Standard
+Rozlišitelnsot a nerozlišitelnost částic.
+\end_layout
+
+\begin_layout Standard
+V jednom stavu pouze jeden fermion.
+ Bosonů libovolně.
+ Dva fermiony je jeden boson.
+ Fermion má spin.
+\end_layout
+
+\begin_layout Standard
+Degenerace (více stavů na jednu hodnotu veličiny).
+\end_layout
+
+\begin_layout Standard
+Stern Gerlach - měření spinu v jiném směru zresetuje předchozí měření a
+ znovu se změří náhoda.
+ Spin změní operátor co nekomutuje.
+\end_layout
+
+\begin_layout Standard
+Konečný počet stavů, nicméně velký.
+\end_layout
+
+\begin_layout Standard
+Kvazispojitost stavů.
+ Velmi malý rozdíl hodnot mezi sousedními stavy, rozdíly lze aproximovat
+ derivací proložené spojité funkce.
+\end_layout
+
+\begin_layout Paragraph*
+Hustota stavů
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g(E)=\frac{dN}{dE}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kolik stavů se vejde do intervalu energie.
+\end_layout
+
+\begin_layout Paragraph*
+Gibbsův statistický soubor
+\end_layout
+
+\begin_layout Standard
+Protože měřní ovlivněno fluktuacemi, středujeme přez statistický soubor.
+ Buď musím opakovat měření, anebo začínám s vícero systémy ve stejném makrostavu
+ (liší se pouze mikrostavy).
+\end_layout
+
+\begin_layout Paragraph*
+Klasifikace statistických souborů z hlediska podmínek
+\end_layout
+
+\begin_layout Itemize
+Mikrokanonický 
+\begin_inset Formula $\delta E=0\,\&\,\delta N=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Kanonický 
+\begin_inset Formula $\delta E\neq0\,\&\,\delta N=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Grandkanonický 
+\begin_inset Formula $\delta E\neq0\,\&\,\delta N\neq0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Stirlingův vzorec
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\ln N!\simeq N(\ln N-1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N!\simeq(\frac{N}{e})^{N}\sqrt{2\pi N}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Princip stejné rovnovážné pravděpodobnosti
+\end_layout
+
+\begin_layout Standard
+Systém je v termodynamické rovnováze 
+\begin_inset Formula $\iff$
+\end_inset
+
+ jsou všechny pravděpodobnosti všech dovolených konfigurací stejné.
+\end_layout
+
+\begin_layout Standard
+Jinak se systém vyvíjí.
+ (Dovolené konfigurace jsou samovolně, fluktuacemi dosažitelné mikrostavy.)
+\end_layout
+
+\begin_layout Standard
+V rovnováze platí následující vzoreček
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{i}=\frac{1}{g(E_{i})}\delta(E_{i}-E_{0})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\delta$
+\end_inset
+
+ je neurčitost - mikroskopická.
+ Makroskopicky je jedna energie ale vícero mikrostavů co jí realizujou.
+\end_layout
+
+\begin_layout Standard
+Důkaz - v rovnováze platí 
+\begin_inset Formula $\forall i:\, p_{i}=\frac{1}{\delta(E)\, N}\delta(E)=\frac{1}{N}$
+\end_inset
+
+.
+ Platí protože všechny pravděpodobnosti stavů jsou v rovnováze stejné.
+\end_layout
+
+\begin_layout Standard
+Rovnost platí, protože 
+\begin_inset Formula $N=\int_{E_{0}}^{E_{0}+\delta(E)}g(E)dE$
+\end_inset
+
+, kde predpokladame, ze 
+\begin_inset Formula $\delta(E)$
+\end_inset
+
+ je tak male, ze v intervalu lze 
+\begin_inset Formula $g(E)$
+\end_inset
+
+ polozit konstantni.
+ I kdyz 
+\begin_inset Formula $g(E)$
+\end_inset
+
+ rychle roste, vzdy lze vzit 
+\begin_inset Formula $\delta(E)$
+\end_inset
+
+ tak male, aby to platilo.
+\end_layout
+
+\begin_layout Paragraph*
+Fázový prostor 
+\begin_inset Formula $\Phi$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $N$
+\end_inset
+
+ částic ve 
+\begin_inset Formula $3D$
+\end_inset
+
+ má hybnosti a polohy, tzn 
+\begin_inset Formula $3N+3N=6N$
+\end_inset
+
+ je dimenze fázového prostoru.
+ Každá konfigurace je pak bodem ve fázovém prostoru.
+\end_layout
+
+\begin_layout Standard
+To je pojem klasické fyziky, přidáme princip neurčitosti:
+\end_layout
+
+\begin_layout Standard
+Měřením (polohy) částici uzavřeme do potenciálové jámy, kde schrodingerova
+ rovnice a okrajové podmínky přesně řeknou, že lze naměřit místo původní
+ přesné hybnosti pouze hybnosti v diskrétních hodnotách 
+\begin_inset Formula $p_{n}=\frac{\pm\pi\hbar n}{\delta x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Chyba v měření (je interval mezi sousedními 
+\begin_inset Formula $n$
+\end_inset
+
+, resp.
+ 
+\begin_inset Formula $p_{n}$
+\end_inset
+
+) nám tedy říká kolik fázového objemu zabírá jedna částice 
+\begin_inset Formula $\Delta p\delta x=2\pi\hbar$
+\end_inset
+
+.
+ To je objem jedné rozlišitelné částice.
+\end_layout
+
+\begin_layout Standard
+Počet rozlišitelných konfigurací v jedné dimenzi objemu 
+\begin_inset Formula $p_{M}L$
+\end_inset
+
+ je 
+\begin_inset Formula $n=\frac{2p_{M}L}{2\pi\hbar}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Jedna 
+\begin_inset Formula $3D$
+\end_inset
+
+ částice má tedy fázový objem 
+\begin_inset Formula $(2\pi\hbar)^{3}$
+\end_inset
+
+, 
+\begin_inset Formula $N$
+\end_inset
+
+ částic ve 
+\begin_inset Formula $3D$
+\end_inset
+
+ (tj.
+ orig.
+ má 
+\begin_inset Formula $3D$
+\end_inset
+
+, fázový prostor má dimenzi 
+\begin_inset Formula $6N$
+\end_inset
+
+ ) má objem jednoho stavu 
+\begin_inset Formula $(2\pi\hbar)^{3N}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Počet rozlišitelných konfigurací tedy závisí na přiděleném objemu takto:
+ 
+\begin_inset Formula $\Gamma=\frac{\delta\Phi}{(2\pi\hbar)^{3N}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Teplota
+\end_layout
+
+\begin_layout Standard
+Odvození z hustoty stavů 
+\begin_inset Formula $g(E)$
+\end_inset
+
+ a dvou systémů s celkovým počtem stavů 
+\begin_inset Formula $g_{tot}\sim g_{A}(E_{A})g_{B}(E_{tot}-E_{A})$
+\end_inset
+
+ (
+\begin_inset Formula $\sim$
+\end_inset
+
+ protože nemusí souhlasit jednotky).
+\end_layout
+
+\begin_layout Standard
+Pro logaritmus pak platí (konstanta z 
+\begin_inset Formula $\sim$
+\end_inset
+
+ vymizí):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ln(g_{tot})=\ln(g_{A}(E_{A}))+\ln(g_{B}(E_{tot}-E_{A}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+V extrému 
+\begin_inset Formula $0=dE_{A}+dE_{B}$
+\end_inset
+
+ je derivace nulová:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial\ln(g_{tot})}{\partial E}=\frac{\partial\ln(g_{A}(E_{A}))}{\partial E_{A}}-\frac{\partial\ln(g_{B}(E_{B}))}{\partial E_{B}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+ a tedy se veličiny rovnají.
+\end_layout
+
+\begin_layout Standard
+Pokud tedy zavedeme teplotu jako derivaci logaritmu počtu stavů, bude automatick
+y veličinou charakterizující tok tepla od teplejšího ke studenějšímu.
+ Navíc díky provedenému výpočtu bude vidět, že systémy budou v rovnováze,
+ pokud budou mít stejnou teplotu.
+ Tedy
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial\ln(g(E))}{\partial E}=\frac{1}{k_{B}T}=\beta
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+ kde 
+\begin_inset Formula $T$
+\end_inset
+
+ je teplota, 
+\begin_inset Formula $k_{B}$
+\end_inset
+
+ je Boltzmannova konstanta, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ je chladnost.
+ Vybudováno ze statistické fyziky, dle hustoty stavů.
+\end_layout
+
+\begin_layout Paragraph*
+Clausiova formulace druhé věty termodynamické
+\end_layout
+
+\begin_layout Standard
+Teplo nemůže téct spontánně z tělesa chladnějšího na těleso teplejší.
+ Opak není vyloučen (fluktuace), ale statisticky je málo pravděpodobný.
+\end_layout
+
+\begin_layout Paragraph*
+Boltzmannovo rozdělení a teplota malých systémů
+\end_layout
+
+\begin_layout Standard
+Teplota zavedená pro systémy s hustotou stavů, tj pouze pro makroskopické.
+ Zobecnění na systémy s malým počtem stavů (
+\begin_inset Formula $S$
+\end_inset
+
+) následující úvahou s rezervoárem.
+\end_layout
+
+\begin_layout Standard
+Chceme pro malý systém 
+\begin_inset Formula $S$
+\end_inset
+
+ znát pravděpodobnosti, s jakými nabývá různých hladin energie v závislosti
+ na dané teplotě (rezervoáru) - 
+\begin_inset Formula $p(E_{i})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Nechť je v kontaktu se systémem 
+\begin_inset Formula $S$
+\end_inset
+
+ rezerovár 
+\begin_inset Formula $R$
+\end_inset
+
+, dohromady v termodynamické rovnováze.
+ Mají tedy stejnou zadanou teplotu 
+\begin_inset Formula $T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Rezervoár splňuje, díky známé rovnici z definice teploty, pro 
+\begin_inset Formula $g$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{\partial\ln(g(E_{R}))}{\partial E_{R}}=\frac{1}{k_{B}T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+ tedy vyjádřená 
+\begin_inset Formula $g$
+\end_inset
+
+ bude exponenciální funkcí teploty (protože předchozí řádek je diferencíální
+ rovnice pro 
+\begin_inset Formula $g$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{R}\sim e^{E_{R}/(k_{B}T)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Počet stavů systému 
+\begin_inset Formula $S$
+\end_inset
+
+ a 
+\begin_inset Formula $R$
+\end_inset
+
+ dohromady je 
+\begin_inset Formula $1\cdot g_{R}$
+\end_inset
+
+, protože systém 
+\begin_inset Formula $S$
+\end_inset
+
+ je malý, jednu energii nese pouze jeden stav.
+ Navíc pravděpodobnost, že systém nese energii 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ lze vyjádřit rozdílem od společné energie obou systémů dohromady 
+\begin_inset Formula $E_{tot}=E_{R}+E_{i}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+Jinak - jaká je pravděpodobnost, že systém 
+\begin_inset Formula $S$
+\end_inset
+
+ má energii 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+? Přesně taková, že 
+\begin_inset Formula $R$
+\end_inset
+
+ má energii 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $E_{tot}-E_{i}$
+\end_inset
+
+, protože hustota stavů celku 
+\begin_inset Formula $R+S$
+\end_inset
+
+ je stejná jako hustota stavů 
+\begin_inset Formula $R$
+\end_inset
+
+ (protože malý systém 
+\begin_inset Formula $S$
+\end_inset
+
+ má pouze 
+\begin_inset Formula $1$
+\end_inset
+
+ stav).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p(E_{i})\sim1\cdot g_{R}(E_{tot}-E_{i})\sim e^{\frac{-E_{i}}{k_{B}T}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Druhou vlnovku dostaneme dosazením 
+\begin_inset Formula $g_{R}\sim e^{E_{tot}-E_{i}/(k_{B}T)}$
+\end_inset
+
+, kde dosazená 
+\begin_inset Formula $E_{tot}$
+\end_inset
+
+ se schová do konstanty ve vlnovce 
+\begin_inset Formula $\sim$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Vlnovky se zbavíme požadavkem na normování pravděpodobnosti, dostame Boltzmannov
+o rozdělení:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+p_{i}=p(E_{i})=\frac{e^{\frac{-E_{i}}{k_{B}T}}}{\sum_{j}e^{\frac{-E_{j}}{k_{B}T}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Stavová/partiční suma/funkce
+\end_layout
+
+\begin_layout Standard
+Normovací konstanta se standarně značí 
+\begin_inset Formula $z=\sum_{j}e^{\frac{-E_{j}}{k_{B}T}}$
+\end_inset
+
+, 
+\begin_inset Quotes eld
+\end_inset
+
+stavová/partiční suma/funkce".
+ Lze z ní spočíst jiné veličiny, např:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E=\sum_{i}p_{i}E_{i}=-\frac{\partial}{\partial\beta}\ln z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Nerovnovážné systémy a mistrovská rovnice
+\end_layout
+
+\begin_layout Standard
+Vývoj systému znamená vývoj pravděpodobností 
+\begin_inset Formula $p_{i}(t)$
+\end_inset
+
+ nabývání energetických hladin (
+\begin_inset Formula $E_{i}$
+\end_inset
+
+).
+ Nutno říct, že energetické hladiny se nemění a závisí na vnějších a okrajových
+ podmíkách.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dp_{i}}{dt}=\sum_{j}(P_{ij}p_{j}-P_{ji}p_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...tzn kolik stavů přejde za čas do stavu 
+\begin_inset Formula $i$
+\end_inset
+
+, mínus kolik se jich vrací.
+ 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+ je rychlost přechodu stavů.
+\end_layout
+
+\begin_layout Subparagraph*
+Fermiho zlaté pravidlo
+\end_layout
+
+\begin_layout Standard
+Z kvantové mechaniky platí 
+\begin_inset Formula $P_{ij}=P_{ji}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Vytknutím z rovnice vývoje systému, pomocí tohoto faktu, získáme kinetickou/řídí
+cí/mistrovskou rovnici.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{dp_{i}}{dt}=\sum_{j}P_{ij}(p_{j}-p_{i})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Díky tomu je splněn princip stejné rovnovážné pravděpodobnosti.
+ Mj.
+ přináší časovou nevratnost.
+\end_layout
+
+\begin_layout Paragraph*
+Objem fázového prostoru
+\end_layout
+
+\begin_layout Standard
+Fázový prostor o dimenzi 
+\begin_inset Formula $6N$
+\end_inset
+
+ s celkovou energií 
+\begin_inset Formula $\leq E$
+\end_inset
+
+ pro částice v objemu 
+\begin_inset Formula $V$
+\end_inset
+
+ má objem 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Phi(E)=\int_{V\times\{\leq E\}}\, d^{3}\mu_{1}...d^{3}\mu_{N}\cdot d^{3}p_{1}...d^{3}p_{N}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...což je objem krychle (za prostor) krát objem koule (za hybnosti 
+\begin_inset Formula $\sum p_{i}^{2}/(2m)\leq E$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Phi(E)=V^{N}\frac{\pi^{3N/2}(2mE)^{3N/2}}{\Gamma(3N/2+1)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rozlišitelnou část fázoprostoru 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Phi_{D}(E)$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ spočteme pomocí úvahy, že libovolná permutace -vzájemná záměna- částic
+ neovlivní pozici konfigurace ve fázovém prostoru, tedy 
+\begin_inset Formula $\Phi_{D}(E)=\Phi(E)/N!$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Dosazením a použitím stirlingova vzorečku k aproximaci jmenovatele 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\Gamma(3N/2+1)$
+\end_inset
+
+ a 
+\begin_inset Formula $N!$
+\end_inset
+
+, dostáváme:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Phi_{D}(E)=V^{N}\pi^{3N/2}(2mE)^{3N/2}\cdot(\frac{e}{N})^{N}(\frac{2e}{3N})^{3N/2}=(\frac{V}{N})^{N}(\frac{4\pi e^{5/3}m}{3})^{3N/2}(\frac{E}{N})^{3N/2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Což zavedením redukovaných veličin: 
+\begin_inset Formula $\epsilon=E/N,\, v=V/N$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Phi_{D}(E)=v^{N}\epsilon^{3N/2}(\frac{4\pi e^{5/3}m}{3})^{3N/2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dostali jsme objem rozlišitelných částic ideálního plynu pro zanedbané energie
+ interakcí a potenciální energii.
+\end_layout
+
+\begin_layout Subparagraph*
+Změna objemu
+\end_layout
+
+\begin_layout Standard
+Malou změnou energie změníme řádově celý objem fázového prostoru, je tedy
+ silnou funkcí energie a většina stavů se nachází blízko slupky.
+\end_layout
+
+\begin_layout Subparagraph*
+Počet rozlišitelných konfigurací
+\end_layout
+
+\begin_layout Standard
+Je objem rozlišitelných konfigurací fázového prostoru děleno objemem jedné
+ rozlišitelné konfigurace.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Gamma=\frac{\Phi_{D}(E,V)}{(2\pi\hbar)^{3N}}=(\frac{V}{N})^{N}(\frac{4e^{5/3}m}{3\pi\hbar^{2}N})^{3N/2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Lze vypočíst i z rozdělovací funkce 
+\begin_inset Formula $\Gamma=g(E)\Delta E$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Záporná teplota
+\end_layout
+
+\begin_layout Standard
+Nastává pro systémy, kde hustota stavů nabývá maximum na vrcholu kopečku.
+ Teplota 
+\begin_inset Formula $T$
+\end_inset
+
+ pak přejde z 
+\begin_inset Formula $+\infty$
+\end_inset
+
+ (levá strana kopečku) do 
+\begin_inset Formula $-\infty$
+\end_inset
+
+ (pravá strana kopečku).
+ Chladnost 
+\begin_inset Formula $\beta$
+\end_inset
+
+ jen spojitě projde nulou.
+\end_layout
+
+\begin_layout Standard
+Záporná teplota je pro energetičtější (teplejší) stavy, než kladná.
+ Dosáhnu jí tak, že budu přidávat energii, ale nikoliv teplem.
+\end_layout
+
+\begin_layout Standard
+Tedy například pro soustavu spinů máme přesně hustotu stavů ve tvaru kopečku.
+ Soustavu spinů vyrovnáme polem rovnoběžně, ochladíme (zafixujeme) a pak
+ otočíme elektrické pole ...
+ a spiny budou najednou ukazovat proti poli a tak bude mít soustava skokově
+ mnohem víc energie.
+\end_layout
+
+\begin_layout Paragraph*
+Entropie 
+\begin_inset Formula $S$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zavedeme statisticky pomocí počtu rozlišitelných konfigurací.
+ Lze zavést termodynamicky (
+\begin_inset Quotes eld
+\end_inset
+
+existuje veličina
+\begin_inset Quotes erd
+\end_inset
+
+), což je ale nenázorné.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S:=k_{B}\ln\Gamma
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...Boltzmannova definice pro mikrokanonický soubor.
+ Pro případ kdy všechny pravděpodobnosti jsou stejné (
+\begin_inset Formula $p_{i}=1/\Gamma$
+\end_inset
+
+), lze definovat i s pomocí pravděpodobnosti:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S:=-k_{B}\ln p_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Vlastnosti entropie
+\end_layout
+
+\begin_layout Itemize
+Aditivní (násobení počtu stavů přejde v logaritmu ve sčítání).
+\end_layout
+
+\begin_layout Itemize
+Nulová je pouze v jednom konkrétním stavu, to pouze pro absolutní nulu.
+\end_layout
+
+\begin_layout Subparagraph*
+Zobecnění - Boltzmann - Gibbsova definice:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S:=-k_{B}\sum_{i}p_{i}\ln p_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...vlastně střední hodnota z logaritmu.
+ Definice je zobecnění, protože pro mikrokanonický rovnovážný systém se
+ vytkne logaritmus a suma sečte na jedničku.
+ Jako zobecněná je stále aditivní.
+\end_layout
+
+\begin_layout Standard
+Pokud entropii přisoudíme jednotky 
+\begin_inset Formula $J\, K^{-1}$
+\end_inset
+
+, budou v důsledku souhlasit termodynamická teplota a jiné veličiny, které
+ jsou závislé na teplotě.
+\end_layout
+
+\begin_layout Paragraph*
+Zákon růstu entropie - éta teorém
+\end_layout
+
+\begin_layout Standard
+Dosadíme mistrovskou rovnici 
+\begin_inset Formula $\frac{dp_{i}}{dt}=\sum_{j}P_{ij}(p_{j}-p_{i})$
+\end_inset
+
+ do derivace entropie:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS:=-k_{B}\sum_{i}\dot{p_{i}}\ln p_{i}-k_{B}\sum_{i}p_{i}\dot{\ln p_{i}}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+ druhý člen bude roven nule, protože 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sum_{i}p_{i}\dot{\ln p_{i}}=\sum_{i}\dot{p_{i}}=\dot{1}=0$
+\end_inset
+
+ a do prvního dosadíme mistrovskou rovnici:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-k_{B}\sum_{i,j}P_{ij}(p_{j}-p_{i})\ln p_{i}=-\frac{1}{2}k_{B}\sum_{i,j}P_{ij}(p_{j}-p_{i})(\ln p_{i}-\ln p_{j})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+kde jsme díky symetrii 
+\begin_inset Formula $P_{ij}$
+\end_inset
+
+ mohli přičíst totéž.
+ Teď je totiž vidět, že suma je vždy záporná - protože 
+\begin_inset Formula $p_{i}\geq p_{j}\iff\ln p_{i}\geq\ln p_{j}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Díky tomu je celá záležitost kladná 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $dS\geq0$
+\end_inset
+
+ (nulová pouze pro stejné pravděpodobnosti a/nebo pro reverzibilní procesy
+ - jinak by v jednom směru entropie mizela což by byl spor).
+\end_layout
+
+\begin_layout Paragraph*
+Entropie a teplota
+\end_layout
+
+\begin_layout Standard
+Pokud máme hustotu stavů, pak 
+\begin_inset Formula $\Gamma=g(E)\Delta E$
+\end_inset
+
+ (vlastnost rozdělovací funkce).
+ Proto lze aproximovat (v logaritmu jde zanedbat tím víc)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=k_{B}\ln(g(E)\Delta E)\simeq k_{B}\ln(g(E))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A zderivujeme dle energie:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\frac{\partial S}{\partial E})_{V,N}=\frac{\partial k_{B}\ln(g(E))}{\partial E}=\frac{1}{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Stejný výsledek dostaneme, pokud máme 
+\begin_inset Formula $S(E,V)$
+\end_inset
+
+ rozepsané do rovnosti pro diferenciály.)
+\end_layout
+
+\begin_layout Paragraph*
+Pozn.
+ druhy entropie
+\end_layout
+
+\begin_layout Standard
+Kanonická entropie - pokud je pravděpodobnost dána Boltzmannovým rozdělením,
+ mluvím o kanonickém stavu.
+ Kanonická entropie je dána vnějšími parametry a jedním vnitřním (
+\begin_inset Formula $T$
+\end_inset
+
+ nebo 
+\begin_inset Formula $E$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Konfigurační entropie - logaritus počtu defektů v pevné látce.
+ (Přesná krystalická mřížka pak má nulovou entropii).
+\end_layout
+
+\begin_layout Paragraph*
+Vztahy mezi rovnovážnou entropií, teplem, prací
+\end_layout
+
+\begin_layout Standard
+Vyjdeme ze střední energie 
+\begin_inset Formula $E=\sum_{i}p_{i}E_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rozepíšeme do diferenciálů
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dE=\sum_{i}p_{i}dE_{i}+\sum_{i}E_{i}dp_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ukážeme, že jeden z těchto členů bude roven 
+\begin_inset Formula $\delta Q$
+\end_inset
+
+ a druhý 
+\begin_inset Formula $\delta W$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Protože vše bude rovnovážné a boltzmannovské, tak 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ nesouvisí s teplotou.
+ 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ jsou neměnné konstanty systému závisející na okrajových podmínkách (např.
+ objem).
+\end_layout
+
+\begin_layout Standard
+Přidáváním tepla zvyšujeme jenom pravděpodobnosti dosažení vyšších energetických
+ hladin, tedy 
+\begin_inset Formula $\sum_{i}E_{i}\, dp_{i}=\delta Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Z 
+\begin_inset Formula $1VTD$
+\end_inset
+
+ plyne, že druhý člen je 
+\begin_inset Formula $\delta W$
+\end_inset
+
+, nicméně lze to ukázat i na základě faktu, že 
+\begin_inset Formula $dE$
+\end_inset
+
+ se mění pouze změnou vnějších podmínek (bez tepla), k tomu je potřeba síla.
+ (Princip adiabatické invariance)
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $\sum_{i}dE_{i}\, p_{i}=\delta W$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nu a síla krát podmínka je práce, konkrétně třeba pro 
+\begin_inset Formula $V$
+\end_inset
+
+: 
+\begin_inset Formula $\delta W=\sum_{i}p_{i}\frac{\partial E_{i}}{\partial V}\, dV=-p\, dV$
+\end_inset
+
+ (protože z 1VTD je 
+\begin_inset Formula $p=-(\frac{\partial E_{i}}{\partial V})_{S}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Paragraph*
+Vztah pro 
+\begin_inset Formula $dS$
+\end_inset
+
+ a 
+\begin_inset Formula $\delta Q$
+\end_inset
+
+ do 
+\begin_inset Formula $1VTD$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS=d(-k_{B}\sum_{i}p_{i}\ln p_{i})=-k_{B}\sum_{i}dp_{i}\,\ln p_{i}-k_{B}\sum_{i}p_{i}\,1/p_{i}\, dp_{i}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...druhý člen vypadne, protože přehodíme sumu a diferenciál a zjistíme, že
+ se jedná o derivaci konstantní jedničky.
+ Za 
+\begin_inset Formula $\ln p_{i}$
+\end_inset
+
+ dosadíme Boltzmannovské rozdělení 
+\begin_inset Formula $p_{i}=e^{-E_{i}/(k_{B}T)}/z$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=k_{B}\sum_{i}dp_{i}\, E_{i}/(k_{B}T)+k_{B}\sum_{i}dp_{i}\,\ln z=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...z druhého členu vytkneme logaritmus, a opět záměnou sumy a diferenciálu
+ bude člen nulový.
+ Na první člen použijeme rovnost 
+\begin_inset Formula $\sum_{i}E_{i}\, dp_{i}=\delta Q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+=1/T\,\sum_{i}dp_{i}\, E_{i}=\frac{\delta Q}{T}=dS
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Diferenciální tvary
+\end_layout
+
+\begin_layout Standard
+Věta termodynamická (
+\begin_inset Formula $1VTD$
+\end_inset
+
+) pak lze psát v diferenciálním tvaru:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dE=T\, dS-p\, dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Porovnáním této rovnice s rovností pro diferenciál funkce 
+\begin_inset Formula $E(S,V)$
+\end_inset
+
+ dostaneme další možné vztahy:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dE=(\frac{\partial E}{\partial S})_{V}\, dS+(\frac{\partial E}{\partial V})_{S}\, dV\,...\,(\frac{\partial E}{\partial S})_{V}=T,\,(\frac{\partial E}{\partial V})_{S}=p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Navíc entropie je stavová, takže platí 
+\begin_inset Formula $0=\oint dS=\oint\frac{dQ}{T}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Mimochodem vztah co dává 
+\begin_inset Formula $T$
+\end_inset
+
+ je podobný jako z části entropie a teplota (ukazuje, že otočením derivací
+ dostaneme 
+\begin_inset Formula $T^{-1}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Paragraph*
+Populární rovnice většiny termodynamiky
+\end_layout
+
+\begin_layout Standard
+Předpokládejme 
+\begin_inset Formula $E(T,V)$
+\end_inset
+
+ (jako v
+\begin_inset Formula $1VTD$
+\end_inset
+
+ ale s 
+\begin_inset Formula $T$
+\end_inset
+
+ místo 
+\begin_inset Formula $S$
+\end_inset
+
+ kvůli budoucímu dosazování) a 
+\begin_inset Formula $S(T,V)$
+\end_inset
+
+ ve stejných proměnných.
+ Použijeme rovnost pro diferenciály a upravíme 
+\begin_inset Formula $1VTD$
+\end_inset
+
+ pro tvar 
+\begin_inset Formula $dS$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS=(\frac{\partial S}{\partial T})_{V}\, dT+(\frac{\partial S}{\partial V})_{T}\, dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dE=(\frac{\partial E}{\partial T})_{V}\, dT+(\frac{\partial E}{\partial V})_{T}\, dV
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+dS=\frac{1}{T}\, dE+\frac{p}{T}\, dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Uvážíme rovnost dvou vyjádření 
+\begin_inset Formula $dS$
+\end_inset
+
+ - dle rovnosti pro diferenciál (levá strana) a 
+\begin_inset Formula $1.VTD$
+\end_inset
+
+ (pravá strana), kde dosadíme do 
+\begin_inset Formula $1VTD$
+\end_inset
+
+ diferenciál 
+\begin_inset Formula $E$
+\end_inset
+
+ (dosazujeme proto, abychom dostali stejné diferenciály 
+\begin_inset Formula $dT$
+\end_inset
+
+ a 
+\begin_inset Formula $dV$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\frac{\partial S}{\partial T})_{V}\, dT+(\frac{\partial S}{\partial V})_{T}\, dV=dS=\frac{1}{T}\,(\frac{\partial E}{\partial T})_{V}\, dT+\frac{1}{T}\,((\frac{\partial E}{\partial V})_{T}+p)\, dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+První mezivýsledek je rovnost koeficientů u diferenciálů 
+\begin_inset Formula $dT$
+\end_inset
+
+, 
+\begin_inset Formula $dV$
+\end_inset
+
+.
+ Tuhle rovnost použijeme dosazením do rovnosti druhých derivací:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{\partial^{2}S}{\partial V\partial T}=\frac{\partial^{2}S}{\partial T\partial V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{T}\frac{\partial^{2}E}{\partial V\partial T}=-\frac{1}{T^{2}}\,((\frac{\partial E}{\partial V})_{T}+p)+\frac{1}{T}\,(\frac{\partial^{2}E}{\partial T\partial V}+(\frac{\partial p}{\partial T})_{V})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A předpokládejme i záměnnost druhých derivací funkce 
+\begin_inset Formula $E$
+\end_inset
+
+, díky tomu dostaneme populární rovnici:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\frac{\partial E}{\partial V})_{T}=T\,(\frac{\partial p}{\partial T})_{V}-p
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Z rovnice pak pro jednoduché systémy platí 
+\begin_inset Quotes eld
+\end_inset
+
+pokud je tlak lineární funkcí teploty, pak energie nezávisí na objemu".
+ Pro složitější systémy máme diferenciální rovnici.
+ V jiných případech lze získat další vztahy dosazením za 
+\begin_inset Formula $p$
+\end_inset
+
+ z 
+\begin_inset Formula $pV=Nk_{B}T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Třetí věta termodynamická
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+T\rightarrow0\Rightarrow S\rightarrow0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Netriviální výsledek klasické termodynamiky, nicméně pro náš způsob odvození
+ je jednoduché, protože pro 
+\begin_inset Formula $T=0$
+\end_inset
+
+ máme jen jeden stav a 
+\begin_inset Formula $\ln1=0$
+\end_inset
+
+.
+ Mimochodem pak i derivace entropie jsou nulové (kapacita a expanzní koeficienty
+).
+\end_layout
+
+\begin_layout Standard
+Navíc ground states nejsou degenerované, protože při nižších teplotách se
+ víc projevují síly zajišťující interakci.
+\end_layout
+
+\begin_layout Standard
+Mimochodem, pomocí tohohle zákona lze měřit entropie přidáváním tepla, sledování
+m teploty a integrací (samozřejmě ne od absolutní nuly, ale třebas někde
+ blízko).
+\end_layout
+
+\begin_layout Paragraph*
+Rozdělovací funkce 
+\begin_inset Formula $f(E)$
+\end_inset
+
+ energií
+\end_layout
+
+\begin_layout Standard
+Hustota pravděpodobnosti, že měřím právě energii 
+\begin_inset Formula $E$
+\end_inset
+
+ se rovná hustotě stavů nabývajících danou energii krát pravděpodobnosti
+ nabytí této energie.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(E)=g(E)\, p(E)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Fluktuace
+\end_layout
+
+\begin_layout Standard
+Jak široká je fukce 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(E)$
+\end_inset
+
+? Jak se chová v okolí maxima? Vyšetřováním derivací 
+\begin_inset Formula $\ln f$
+\end_inset
+
+ (abychom pak mohli dosadit do Taylorova rozvoje):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\ln f}{dE}=\frac{d\ln g}{dE}+\frac{d\ln p}{dE}=\frac{1}{k_{B}T(E)}-\frac{1}{k_{B}T_{R}}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Máme dvě teploty - rezervoár a systém, teplota systému osciluje s energií,
+ teplota rezervoáru určije pravděpodobnosti Boltzmannovským rozdělením.
+ Pro systém v kontaktu s rezervoárem jsme takhle zavetli teplotu, která
+ když se rovná teplotě rezervoáru, tak je stejná...
+ a proto je první derivace nulová.
+\end_layout
+
+\begin_layout Standard
+Druhá derivace už bude značit fluktuaci:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d^{2}\ln f}{dE^{2}}=-\frac{1}{k_{B}T^{2}}\frac{dT}{dE}=-\frac{1}{k_{B}T^{2}}\frac{1}{c}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(což je též tepelná kapacita).
+\end_layout
+
+\begin_layout Standard
+Taylor tedy vypadá takto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ln f(E)=\ln f(E_{0})-\frac{1}{2k_{B}T^{2}}\frac{dT}{dE}(E-E_{0})^{2}+...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Z čehož na okolí maxima funkce 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $f(E)$
+\end_inset
+
+ v okolí maxima vypadá takto 
+\begin_inset Formula $f=f_{0}\exp(-\frac{(E-E_{0})^{2}}{2k_{B}T^{2}c})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Funkce 
+\begin_inset Formula $f$
+\end_inset
+
+ výrazně klesá, když 
+\begin_inset Formula $|E-E_{0}|\sim\sqrt{k_{B}\, T\, T\, c}$
+\end_inset
+
+.
+ 
+\begin_inset Formula $k_{B}T$
+\end_inset
+
+ je mikroskopická veličina, 
+\begin_inset Formula $T\, c$
+\end_inset
+
+ makroskopická.
+ Fluktuace jdou s odmocninou.
+\end_layout
+
+\begin_layout Paragraph*
+Ideální jednoatomový plyn a maxwellovo rozdělení rychlostí
+\end_layout
+
+\begin_layout Standard
+Cíl bude najít rozdělující funkci rychlostí (Maxwellovo rozdělení) za předpoklad
+u, že energie ideálního plynu je pouze kinetická energie.
+ Vezmeme nejprve rychlost pouze v jednom směru, 
+\begin_inset Formula $v_{x}$
+\end_inset
+
+ a vezmeme vztah z důkazu "Boltzmanova rozdělení a teplota malých systémů"
+ 
+\begin_inset Formula $(p(E_{i})\sim1\cdot g_{R}(E_{tot}-E_{i})\sim e^{\frac{-E_{i}}{k_{B}T}})$
+\end_inset
+
+, dostaneme
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p\sim e^{\frac{-mv_{x}^{2}}{2k_{B}T}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rozdělovací funkci rychlosti dostaneme vynormováním:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+f(v_{x})=Ae^{\frac{-mv_{x}^{2}}{2k_{B}T}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Normovací konstantu 
+\begin_inset Formula $A$
+\end_inset
+
+ spočteme pomocí vzorečku Gaussova integrálu: 
+\begin_inset Formula 
+\[
+\int_{-\infty}^{+\infty}e^{-\alpha x^{2}}dx=\sqrt{\frac{\pi}{\alpha}}\,...\,1/A=\int_{-\infty}^{+\infty}e^{\frac{-mv_{x}^{2}}{2k_{B}T}}=\sqrt{\frac{2\pi k_{B}T}{m}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tedy 
+\begin_inset Formula $1D$
+\end_inset
+
+ rozdělení rychlostí je takovéto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(v_{x})=\sqrt{\frac{m}{2\pi k_{B}T}}e^{\frac{-mv_{x}^{2}}{2k_{B}T}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Rozdělovací funkci v prostoru dostaneme vynásobením, protože bázové rychlosti
+ jsou nezávislé veličiny a přispívají stejně do kinetické energie:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f(\vec{v})=(\frac{m}{2\pi k_{B}T})^{3/2}e^{\frac{-mv^{2}}{2k_{B}T}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...což je Maxwellovo rozdělení.
+\end_layout
+
+\begin_layout Standard
+Znalostí rozdělení lze vyintegrováním získat rozdělení pro libovolnou osu
+ (jako pro klasické statistické veličiny), do energie lze také doplnit potenciál
+ní složka, kdyby bylo potřeba.
+\end_layout
+
+\begin_layout Paragraph*
+Pozn
+\end_layout
+
+\begin_layout Standard
+Nejpravděpodobnější rychlost je nulová, nicméně pouze velmi málo stavů má
+ rychlosti blízké nule.
+\end_layout
+
+\begin_layout Standard
+Fluktuace roste s velikostí systému 
+\begin_inset Formula $N$
+\end_inset
+
+, ale jako odmocnina 
+\begin_inset Formula $\sqrt{N}$
+\end_inset
+
+, takže relativně klesá!
+\end_layout
+
+\begin_layout Standard
+U ideálního plynu platí Boylův zákon 
+\begin_inset Formula $p\sim1/V$
+\end_inset
+
+, stanoveno experiemtnálně - tzn speciálně nezávisí na hmotnosti.
+\end_layout
+
+\begin_layout Standard
+Mol
+\end_layout
+
+\begin_layout Standard
+Jeden mol je 
+\begin_inset Formula $N_{A}$
+\end_inset
+
+ částic.
+\end_layout
+
+\begin_layout Standard
+Molární plynová konstanta
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+R=N_{A}k_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Statistická teplota a teplota ideálního plynu jsou totožné.
+\end_layout
+
+\begin_layout Standard
+Z Maxwellova rozdělení se odvodí stavová rovnice.
+\end_layout
+
+\begin_layout Paragraph*
+Děje ideálního plynu
+\end_layout
+
+\begin_layout Itemize
+Izobarický
+\end_layout
+
+\begin_layout Itemize
+Izotermický
+\end_layout
+
+\begin_layout Itemize
+Adiabatický
+\end_layout
+
+\begin_layout Itemize
+Joulova expanze - plyn se rozpíná sám bez konání vnější práce, difunduje.
+ Určitě se mění entropie, může se použít pro zkapalnění plynu.
+\end_layout
+
+\begin_layout Paragraph*
+Energie ideálního plynu bodových částic
+\end_layout
+
+\begin_layout Standard
+Z části o objemu fázového prostoru platí (většina stavů je těsně pod povrchem
+ fázového objemu):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g\sim\Gamma\sim V^{N}E^{3N/2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(Mocnina 
+\begin_inset Formula $3N/2$
+\end_inset
+
+ u energie vyšla z objemu koule hybností.)
+\end_layout
+
+\begin_layout Standard
+Zapsali jsme vztah bez konstant, protože nás bude zajímat derivace logaritmu
+ ve vzorečku definice teploty (tzn zůstane tam pouze exponent u energie):
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{1}{k_{B}T}=\frac{\partial\ln(g(E))}{\partial E}=\frac{3N}{2E}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+ tedy 
+\begin_inset Formula $E=3/2Nk_{B}T$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subparagraph*
+Pozn - energie ideálního plynu s obecnou vnitřní strukturou 
+\begin_inset Formula $E=c_{v}Nk_{B}T$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Tepelné kapacity
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{V/P}:=(\frac{\partial Q}{\partial T})_{V/P}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $c_{V}:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Díky konstantnímu objemu (
+\begin_inset Formula $pdV=0$
+\end_inset
+
+) platí z 1VTD 
+\begin_inset Formula $dE=\delta Q$
+\end_inset
+
+, což po dosazení energie ideálního plynu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{V}=(\frac{\partial Q}{\partial T})_{V}=(\frac{\partial E}{\partial T})_{V}=3/2Nk_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $c_{P}:$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Upravíme 1VTD tak, abychom mohli dosadit 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $V\, dp=0$
+\end_inset
+
+:
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ 
+\begin_inset Formula 
+\[
+dE=\delta Q-pdV+Vdp-Vdp=\delta Q-d(pV)+Vdp=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...za diferenciál 
+\begin_inset Formula $d(pV)$
+\end_inset
+
+ dosadíme stavovou rovnici a protože kapacity zajímá derivace v teplotě,
+ dostaneme:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dE=\delta Q-Nk_{B}dT
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Protože tepelná kapacita 
+\begin_inset Formula $c_{P}$
+\end_inset
+
+ je rovna derivaci vztahu 
+\begin_inset Formula $\delta Q=dE+Nk_{B}dT$
+\end_inset
+
+ dle teploty, lze za 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(\frac{\partial E}{\partial T})$
+\end_inset
+
+ dosadit 
+\begin_inset Formula $c_{V}$
+\end_inset
+
+ a dostaneme:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{p}=c_{V}+Nk_{B}\,(\Rightarrow c_{p}>c_{V},\, c_{p}=5/2Nk_{B})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Meyerův vztah - což platí i pro složité plyny.
+\end_layout
+
+\begin_layout Subparagraph*
+Adiabatický proces
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+3/2Nk_{B}dT=dE=\delta Q-pdV=0-pdV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...použijeme opět rovnici 
+\begin_inset Formula $d(Vp)=Nk_{B}dT$
+\end_inset
+
+ a dostaneme diferenciální rovnici:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+3/2\, d(pV)+p\, dV=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...což po rozseparování...
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+3/2\, V\, dp+5/2\, p\, dV=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...a integraci vyústí v:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\ln(p^{3/2}V^{5/2})=konst
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+pV^{\kappa}=konst,\,\kappa=\frac{c_{p}}{c_{V}}=\frac{5/2}{3/2}>1
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Entropie ideálního plynu
+\end_layout
+
+\begin_layout Standard
+První způsob výpočtu je z 1VTD, do které se dosadí energie ideálního plynu
+ a stavová rovnice:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS=\frac{dE}{T}+\frac{p}{T}\, dV=3/2Nk_{B}\frac{dT}{T}+Nk_{B}\frac{dV}{V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...díky čemuž máme rovnost pro entropii (pro obecný proces, diferenciály teď
+ nejsou konstantní):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=S_{0}+Nk_{B}\ln(T^{3/2}V)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...kde 
+\begin_inset Formula $S_{0}$
+\end_inset
+
+ je stanovené podle teploty a objemu známých v jistou chvíli.
+\end_layout
+
+\begin_layout Standard
+Druhý způsob výpočtu je pomocí hustoty stavů - z příkladu objemu fázového
+ prostoru máme (dosazením teploty místo energie):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g\sim\Gamma\sim V^{N}T^{3N/2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...což přímo z 
+\begin_inset Formula $S=k_{B}\ln g$
+\end_inset
+
+ dává:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=k_{B}\ln g=S_{0}+Nk_{B}\ln(T^{3/2}V)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Na první pohled je tenhle odvozený vzoreček v rozporu s třetí větou termodynamic
+kou, protože nejde k nule.
+ Nicméně je odvozená na základě stavové rovnice, která přestává platit při
+ změně skupenství a každá věc jednou při 
+\begin_inset Formula $T\rightarrow0$
+\end_inset
+
+ zkondenzuje.
+\end_layout
+
+\begin_layout Standard
+Druhá věc - vzoreček musí být aditivní! Nicméně odvozovali jsme ho pro konstantn
+í počet částic (a tedy bychom omylem vytvořili Gibbsův paradox), pro měnící
+ se počet částic by aditivitu zařídil člen 
+\begin_inset Formula $V/N$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Van der Waalsova rovnice
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(p+(\frac{N}{V})^{2}a)(V-Nb)=Nk_{B}T
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vyjádříme z VDW rovnice 
+\begin_inset Formula $p$
+\end_inset
+
+ a dosadíme do populární rovnice (členy 
+\begin_inset Formula $a$
+\end_inset
+
+,
+\begin_inset Formula $b$
+\end_inset
+
+ nezávisí na 
+\begin_inset Formula $T$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\frac{\partial E}{\partial V})_{T}=T(\frac{\partial}{\partial T})_{V}(-(\frac{N}{V})^{2}a+\frac{Nk_{B}T}{V-Nb})-(-(\frac{N}{V})^{2}a+\frac{Nk_{B}T}{V-Nb})=(\frac{N}{V})^{2}a
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Základní přehled o termodynamice
+\end_layout
+
+\begin_layout Standard
+Do rovnice 1VTD lze dosadit i jiné pracovní členy, například:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $+\sigma de$
+\end_inset
+
+ ...
+ za pružinu
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $+\Gamma d\varphi$
+\end_inset
+
+ ...
+ povrchové napětí pro mýdlovou bublinu
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $+\varepsilon\cdot dD$
+\end_inset
+
+ ...
+ pro dielektrikum i kondenzátor
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-D\cdot d\varepsilon$
+\end_inset
+
+ ...
+ pouze pro dielektrikum
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $+BdH$
+\end_inset
+
+ ...
+ magnetování jádra - celá cívka
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-MdB$
+\end_inset
+
+ ...
+ pouze pro jádro cívky
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $-dq\varphi$
+\end_inset
+
+ ...
+ náboj pod potenciálem
+\end_layout
+
+\begin_layout Paragraph*
+Existenční formulace druhé věty termodynamické
+\end_layout
+
+\begin_layout Standard
+Existuje aditivní stavová veličina zvaná entropie, která v tepelně izolovaných
+ systémech nikdy neklesá.
+\end_layout
+
+\begin_layout Standard
+Entropii jsem zavedli statisticky a dokázali, že neklesá.
+ Že je dokonce ekvivalentní s tokem z teplejšího do chladnějšího - mějme
+ 
+\begin_inset Formula $S(E,V)$
+\end_inset
+
+ rovnost pro diferenciál a 1VTD:
+\begin_inset Formula 
+\[
+(\frac{\partial S}{\partial E})_{V}dE+(\frac{\partial S}{\partial V})_{E}dV=dS=\frac{1}{T}dE+\frac{p}{T}dV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Rightarrow(\frac{\partial S}{\partial E})_{V}=\frac{1}{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Protože je dle předpokladu aditivní, tak uvažujeme li dvě části izolovaného
+ systému 
+\begin_inset Formula $S_{tot}=S_{A}+S_{B}$
+\end_inset
+
+, navíc dle druhého předpokladu 
+\begin_inset Formula $S_{tot}$
+\end_inset
+
+ neklesá (izolovaný systém).
+ Tedy výměna energií při nekonání práce vypadá takhle:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS_{tot}=dS_{A}+dS_{B}=(\frac{\partial S_{A}}{\partial E})_{V}dE_{A}+(\frac{\partial S_{B}}{\partial E})_{V}dE_{B}=\frac{1}{T_{A}}dE_{A}+\frac{1}{T_{B}}dE_{B}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...protože je systém izolovaný, platí 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $dE_{A}=-dE_{B}$
+\end_inset
+
+, což spolu s předpokladem nerostoucí funkce dá finálně:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+=\frac{1}{T_{A}}dE_{A}-\frac{1}{T_{B}}dE_{A}(=dS_{tot})\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tedy pokud je 
+\begin_inset Formula $dE_{A}$
+\end_inset
+
+ kladné (
+\begin_inset Formula $A$
+\end_inset
+
+ příjmá energii), tak teplota druhého systému musí být větší.
+\end_layout
+
+\begin_layout Paragraph*
+Tepelné motory
+\end_layout
+
+\begin_layout Standard
+Tepelný motor je stroj co cyklicky mění teplo v práci.
+\end_layout
+
+\begin_layout Standard
+Manipulace s teplotou nosného média se provádí pomocí stlačování, popř.
+ expanzí.
+\end_layout
+
+\begin_layout Paragraph*
+Perpetum mobile druhého druhu
+\end_layout
+
+\begin_layout Standard
+Máme li pouze zdroj tepla a motor bez ochlazovátka, platilo by 
+\begin_inset Formula $dS_{A}=\frac{q_{A}}{T_{A}}<0$
+\end_inset
+
+, protože teplo by jenom odcházelo ze systému....
+ a to by byl spor s nerostoucí entropií.
+\end_layout
+
+\begin_layout Paragraph*
+Motor s ochlazovátkem
+\end_layout
+
+\begin_layout Standard
+Do motoru jde 
+\begin_inset Formula $q_{A}$
+\end_inset
+
+, z motoru do ochlazovátka 
+\begin_inset Formula $q_{B}$
+\end_inset
+
+.
+ Celková entropie dá podmínky na velikosti tepel:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS_{tot}=dS_{A}-dS_{B}=\frac{-q_{A}}{T_{A}}+\frac{q_{B}}{T_{B}}\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...tedy 
+\begin_inset Formula $q_{B}\geq q_{A}\frac{T_{B}}{T_{A}}$
+\end_inset
+
+ a dostaneme i účinnost (jako práci na teplo 
+\begin_inset Formula $\eta=W/q_{A}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\eta=1-q_{B}/q_{A}\leq1-T_{B}/T_{A}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kdybychom měli rovnost, měli byhom vratný proces.
+ Větší účinnost vychází pro větší rozdíl teplot.
+\end_layout
+
+\begin_layout Paragraph*
+Inverzní motor - tepelné čerpadlo
+\end_layout
+
+\begin_layout Standard
+Stejný případ jako motor, nicméně vše se otočí, včetně nerovností 
+\begin_inset Formula $q_{B}\leq q_{A}\frac{T_{B}}{T_{A}}$
+\end_inset
+
+, díky čemuž může být účinnost větší než jedna:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\eta=\frac{W}{q_{A}}=\frac{1}{1-q_{B}/q_{A}}\leq\frac{1}{1-T_{B}/T_{A}}=\frac{T_{A}}{T_{A}-T_{B}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A čím bližší teploty, tím vyšší účinnost.
+ Vyplácí se víc, než jen spalovat palivo.
+\end_layout
+
+\begin_layout Paragraph*
+Carnotův princip
+\end_layout
+
+\begin_layout Standard
+Všechny vratné dvoustavové motory pracující mezi stejným párem teplot mají
+ stejnou účinnost a žádný nevratný ji nemůže mít větší.
+\end_layout
+
+\begin_layout Paragraph*
+Teoretická termodynamika
+\end_layout
+
+\begin_layout Paragraph*
+Teorie termodynamických potenciálů
+\end_layout
+
+\begin_layout Subparagraph*
+Energie 
+\begin_inset Formula $E(S,V)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+1VTD - 
+\begin_inset Formula $dE=TdS-pdV$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Energie je také potenciální energie adiabatického procesu (tam je 
+\begin_inset Formula $S$
+\end_inset
+
+ konstnatní).
+\end_layout
+
+\begin_layout Subparagraph*
+Volná energie 
+\begin_inset Formula $F(T,V)=E-TS$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Přičteme k energii 
+\begin_inset Formula $+SdT-SdT$
+\end_inset
+
+ (protože právě tenhle člen může vyjadřovat volnou energii z okolí ve formě
+ tepla) a díky 
+\begin_inset Formula $d(TS)=TdS+SdT$
+\end_inset
+
+ dostaneme:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dF=d(E-TS)=-SdT-pdV
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kde levou stranou prohlásíme za volnou energii.
+\end_layout
+
+\begin_layout Standard
+Volná energie je potenciální energie izotermického procesu; jmenuje se volná
+ energie, protože může dodávat do procesu/reakce energii z okolí pouze proto,
+ aby entropie neklesala.
+\end_layout
+
+\begin_layout Subparagraph*
+Enthalpie 
+\begin_inset Formula $H(S,P)=E+pV$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Přičteme k energii 
+\begin_inset Formula $-Vdp+Vdp$
+\end_inset
+
+ (protože právě tenhle člen se pojí s prácí ) a díky 
+\begin_inset Formula $d(pV)=Vdp+pdV$
+\end_inset
+
+ dostaneme:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dH=d(E+pV)=TdS+Vdp
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kde levou stranou prohlásíme za Enthalpii.
+\end_layout
+
+\begin_layout Standard
+Enthalpie obsahuje i práci potřebnou k dostání objemu do blackboxu.
+ Kupříkladu při chemické reakci kdy se mění objem je potřeba započítat i
+ práci pro expanzi/kompresi!
+\end_layout
+
+\begin_layout Subparagraph*
+Gibbsova energie 
+\begin_inset Formula $G(T,p)=E-TS+pV$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Provedeme s 1VTD najednou obě úpravy jako u volné energie a enthalpie, dostaneme
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dG=d(E-TS+pV)=-SdT+Vdp
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Gibbsova energie je jediný potenciál s intenzivními veličinami (Intenzivní
+ veličiny lze měřit v každém bodě např.
+ 
+\begin_inset Formula $T$
+\end_inset
+
+,
+\begin_inset Formula $P$
+\end_inset
+
+, kdežto extenzivní veličiny jsou ty, co závisí na velikosti systému, ty
+ co jsou aditivní, např.
+ 
+\begin_inset Formula $E$
+\end_inset
+
+, 
+\begin_inset Formula $T$
+\end_inset
+
+, 
+\begin_inset Formula $S$
+\end_inset
+
+, 
+\begin_inset Formula $V$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Gibbsova energie je potenciální energie izotermického procesu všech neexpanzivní
+ch dějů.
+\end_layout
+
+\begin_layout Paragraph*
+Termodynamické potenciály pro kapacity
+\end_layout
+
+\begin_layout Standard
+Pokud je člen 
+\begin_inset Formula $pdV$
+\end_inset
+
+ nulový, platí 
+\begin_inset Formula $Q=TdS$
+\end_inset
+
+ a pak dostaneme použitím faktu 
+\begin_inset Formula $S=(-\frac{\partial F}{\partial T})$
+\end_inset
+
+ (což máme klasicky z rovnosti dvou vyjádření diferenciálů 
+\begin_inset Formula $F$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{V}=(\frac{\partial Q}{\partial T})_{V}=T(\frac{\partial S}{\partial T})_{V}=-T(\frac{\partial^{2}F}{\partial T^{2}})_{V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A pro druhou kapacitu, použitím 
+\begin_inset Formula $S=(-\frac{\partial G}{\partial T})$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{p}=(\frac{\partial Q}{\partial T})_{p}=T(\frac{\partial S}{\partial T})_{p}=-T(\frac{\partial^{2}G}{\partial T^{2}})_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...anebo při konstantním tlaku (
+\begin_inset Formula $Vdp=0$
+\end_inset
+
+) platí 
+\begin_inset Formula $TdS=dH$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{p}=(\frac{\partial Q}{\partial T})_{p}=T(\frac{\partial S}{\partial T})_{p}=(\frac{\partial H}{\partial T})_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Pro systém co relaxuje do rovnováhy
+\end_layout
+
+\begin_layout Itemize
+se energie drží konstnatní
+\end_layout
+
+\begin_layout Itemize
+volná energie klesá (protože entropie roste)
+\end_layout
+
+\begin_layout Itemize
+enthalpie je stejná (pokud nepovolím práci)
+\end_layout
+
+\begin_layout Itemize
+Gibbsova energie klesá (entropie roste)
+\end_layout
+
+\begin_layout Paragraph*
+Termodynamické vztahy - Maxwellovy
+\end_layout
+
+\begin_layout Standard
+Lze odvodit speciální Maxwellův vztah z každého termodynamického potenciálu.
+\end_layout
+
+\begin_layout Standard
+Napíše se vztah pro diferenciál potenciálu v jeho přirozených proměnných
+ a rovnost druhých derivací potenciálu dle těchto proměnných.
+ Díky tomu, že přirozené proměnné se vyskytují v diferenciálech v rovnosti
+ termodynamických potenciálů, dostaneme pak rovnost prvních derivací.
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+Přirozené proměnné se ve vztazích píšou do diferenciálů.
+\end_layout
+
+\begin_layout Subparagraph*
+Maxwellův vztah z energie 
+\begin_inset Formula $E(S,V)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dE=(\frac{\partial E}{\partial S})_{V}dS+(\frac{\partial E}{\partial V})_{S}dV\,\textrm{... (diferenciál)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dE=TdS-pdV\,\textrm{... (1VTD)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial V}(\frac{\partial E}{\partial S})_{V}=\frac{\partial}{\partial S}(\frac{\partial E}{\partial V})_{S}\,\textrm{... (rovnost druhých derivací)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial V}T=\frac{\partial}{\partial S}(-p)\,\textrm{... (diferenciály se musejí rovnat, dosadím)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Maxwellův vztah z energie (přibyly proměnné podle kterých se nederivuje,
+ které držíme na každé straně rovnice konstantní):
+\begin_inset Formula 
+\[
+(\frac{\partial T}{\partial V})_{S}=-(\frac{\partial p}{\partial S})_{V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Maxwellův vztah z volné energie 
+\begin_inset Formula $F(T,V)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dF=(\frac{\partial F}{\partial T})_{V}dT+(\frac{\partial F}{\partial V})_{T}dV\,\textrm{... (diferenciál)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dF=-SdT-pdV\,\textrm{... (volná energie)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial V}(\frac{\partial F}{\partial T})_{V}=\frac{\partial}{\partial T}(\frac{\partial F}{\partial V})_{T}\,\textrm{... (rovnost druhých derivací)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial V}(-S)=\frac{\partial}{\partial T}(-p)\,\textrm{... (diferenciály se musejí rovnat, dosadím)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Maxwellův vztah z volné energie:
+\begin_inset Formula 
+\[
+(\frac{\partial S}{\partial V})_{T}=(\frac{\partial p}{\partial T})_{V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Maxwellův vztah z enthalpie 
+\begin_inset Formula $H(S,p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dH=(\frac{\partial H}{\partial S})_{p}dS+(\frac{\partial H}{\partial p})_{S}dp\,\textrm{... (diferenciál)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dH=TdS+Vdp\,\textrm{... (enthalpie)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial p}(\frac{\partial H}{\partial S})_{p}=\frac{\partial}{\partial S}(\frac{\partial H}{\partial p})_{S}\,\textrm{... (rovnost druhých derivací)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial p}T=\frac{\partial}{\partial S}V\,\textrm{... (diferenciály se musejí rovnat, dosadím)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Maxwellův vztah z enthalpie:
+\begin_inset Formula 
+\[
+(\frac{\partial T}{\partial p})_{S}=(\frac{\partial V}{\partial S})_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Maxwellův vztah z Gibbsovy energie 
+\begin_inset Formula $G(T,p)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dG=(\frac{\partial G}{\partial T})_{p}dT+(\frac{\partial G}{\partial p})_{T}dp\,\textrm{... (diferenciál)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dG=-SdT+Vdp\,\textrm{... (gibbsova energie)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial p}(\frac{\partial G}{\partial T})_{p}=\frac{\partial}{\partial T}(\frac{\partial G}{\partial p})_{T}\,\textrm{... (rovnost druhých derivací)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial p}(-S)=\frac{\partial}{\partial T}V\,\textrm{... (diferenciály se musejí rovnat, dosadím)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Maxwellův vztah z gibbsovy energie:
+\begin_inset Formula 
+\[
+-(\frac{\partial S}{\partial p})_{T}=(\frac{\partial V}{\partial T})_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zapamatování - 
+\begin_inset Formula $S$
+\end_inset
+
+,
+\begin_inset Formula $T$
+\end_inset
+
+ a 
+\begin_inset Formula $p$
+\end_inset
+
+,
+\begin_inset Formula $V$
+\end_inset
+
+ jsou vždy diagonálně od sebe a když mám u sebe 
+\begin_inset Formula $T$
+\end_inset
+
+ a 
+\begin_inset Formula $V$
+\end_inset
+
+, přidám mínus.
+\end_layout
+
+\begin_layout Paragraph*
+Clausius Clapeironova formule
+\end_layout
+
+\begin_layout Standard
+Chceme závislost tlaku na teplotě pro dvě fáze v konstantním objemu (kde
+ teplem dochází k přechodům mezi fázemi).
+\end_layout
+
+\begin_layout Standard
+Použijeme maxwellův vztah z volné energie a definici entropie:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\frac{\partial p}{\partial T})_{V}=(\frac{\partial S}{\partial V})_{T}=\frac{1}{T}(\frac{\delta q}{\delta V})_{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Chceme se zbavit veličin 
+\begin_inset Formula $V$
+\end_inset
+
+ a 
+\begin_inset Formula $q$
+\end_inset
+
+, toho docílíme úvahou o vlivu dodaného tepla použitím faktů:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta q=l\Delta m$
+\end_inset
+
+, dodáním latentního tepla fázového přechodu změníme fázi 
+\begin_inset Formula $\Delta m$
+\end_inset
+
+ hmotnosti
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta V=V_{2}-V_{1}=\Delta m(\frac{1}{\rho_{2}}-\frac{1}{\rho_{1}})$
+\end_inset
+
+ a přesně takhle se změní objem
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\frac{\partial p}{\partial T})_{V}=\frac{1}{T}(\frac{\delta q}{\delta V})_{T}=\frac{l}{T}\frac{1}{1/\rho_{2}-1/\rho_{1}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A to je Clausius Clapeironova formule.
+\end_layout
+
+\begin_layout Standard
+V zásadě popisuje i efekty jako protržení trubek při zmrznutí vody (nebo
+ roztání jiné tekutiny), popř.
+ efekt v papiňáku.
+\end_layout
+
+\begin_layout Paragraph*
+Vztahy kapacit
+\end_layout
+
+\begin_layout Standard
+Znám li 
+\begin_inset Formula $S(T,p)$
+\end_inset
+
+ a 
+\begin_inset Formula $p(T,V)$
+\end_inset
+
+, resp.
+ 
+\begin_inset Formula $V(T,p)$
+\end_inset
+
+ můžu využít řetízkové derivování funkce 
+\begin_inset Formula $S(T,V(T,p))$
+\end_inset
+
+, abych dostal vztah 
+\begin_inset Formula $c_{p}$
+\end_inset
+
+ a 
+\begin_inset Formula $c_{V}$
+\end_inset
+
+.
+ Tedy do vztahu pro termodynamické potenciály a kapacity (první rovnítko)
+ dosadíme složenou derivaci 
+\begin_inset Formula $S(T,V(T,p))$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{p}=T(\frac{\partial S}{\partial T})_{p}=T((\frac{\partial S}{\partial T})_{V}+(\frac{\partial S}{\partial V})_{T}(\frac{\partial V}{\partial T})_{p})=c_{V}+T(\frac{\partial S}{\partial V})_{T}(\frac{\partial V}{\partial T})_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%Ad 1: Vztah mate spatne.
+ U posledniho clenu chybi T.
+ Po oprave k dukazu identity predpoklad S(T,P(T,V)) neni vhodny.
+ Zkuste predpokladat S(T,V(T,P)).
+ Pak je dukaz okamzity a staci Vam k tomu pouze vzorecek pro derivaci slozene
+ funkce , pripadne jeste si uvedomit, ze  Takto to mam v poznamkach k prednasce.
+\end_layout
+
+\end_inset
+
+...kde se pak první člen rovná 
+\begin_inset Formula $c_{V}$
+\end_inset
+
+ (z části termodynamické potenciály pro kapacity).
+\end_layout
+
+\begin_layout Standard
+Můžeme dostat další rovnost, dosazením maxwellova vztahu z volné energie
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $(\frac{\partial p}{\partial T})_{V}=(\frac{\partial S}{\partial V})_{T}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+c_{p}=c_{V}+T(\frac{\partial p}{\partial T})_{V}(\frac{\partial V}{\partial T})_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Teď použijeme identitu pro derivace implicitní funkce 
+\begin_inset Formula $const=V(T,P)$
+\end_inset
+
+, 
+\begin_inset Formula $(\frac{\partial p}{\partial T})_{V}=-(\frac{\partial V}{\partial T})_{p}/(\frac{\partial V}{\partial p})_{T}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+c_{p}=c_{V}-T(\frac{\partial V}{\partial p})_{T}(\frac{\partial V}{\partial T})_{p}^{2}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Z toho vidíme různé fyzikální významy:
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\frac{\partial S}{\partial V})_{T}$
+\end_inset
+
+ ...
+ objemová roztažnost dodáváním tepla
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\frac{\partial V}{\partial T})_{p}$
+\end_inset
+
+ ...
+ je expanze teplotní
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\frac{\partial p}{\partial T})_{V}$
+\end_inset
+
+ ...
+ nárůst tlaku s teplotou
+\end_layout
+
+\begin_layout Itemize
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula $(\frac{\partial p}{\partial T})_{V}$
+\end_inset
+
+ ...
+ nárůst tlaku se stlačenim (pružnost)
+\end_layout
+
+\begin_layout Itemize
+mmch.
+ v pevných látkách 
+\begin_inset Formula $c_{p}\simeq c_{V}$
+\end_inset
+
+ protože expenzní členy vypadávají.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\frac{(\frac{\partial p}{\partial V})_{S}}{(\frac{\partial p}{\partial V})_{T}}=\frac{c_{p}}{c_{V}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Statistický výpočet termodynamických veličin
+\end_layout
+
+\begin_layout Subparagraph*
+Přímým výpočtem z Boltzmannova rozdělení
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $E=\sum p_{i}E_{i}$
+\end_inset
+
+, resp.
+ 
+\begin_inset Formula $E=\int f(E)dE$
+\end_inset
+
+, 
+\begin_inset Formula $i$
+\end_inset
+
+ indexuje různé rozlišitelné stavy.
+\end_layout
+
+\begin_layout Subparagraph*
+Přímým výpočtem z partiční funkce
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=-k_{B}\sum_{i}p_{i}\ln p_{i}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...
+ do 
+\begin_inset Formula $\ln p_{i}$
+\end_inset
+
+ dosadíme z Boltzmannova rozdělení 
+\begin_inset Formula $p_{i}=\exp(-\beta E_{i})/z$
+\end_inset
+
+ a sečteme sumu pravděpodobností na 
+\begin_inset Formula $1$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-k_{B}\sum_{i}p_{i}(-\frac{1}{k_{B}T}E_{i})+k_{B}\sum_{i}p_{i}\ln z=\frac{E}{T}+k_{B}\ln z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No a dosazením do 
+\begin_inset Formula $F=E-TS$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+F=-k_{B}T\ln z
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Další veličiny jdou pak vypočítat takto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S=-(\frac{\partial F}{\partial T})_{V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+p=-(\frac{\partial F}{\partial V})_{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Z hustoty stavů a entropie
+\end_layout
+
+\begin_layout Standard
+Protože máme li 
+\begin_inset Formula $g(E,V)$
+\end_inset
+
+ a 
+\begin_inset Formula $S(E,V)=k_{B}\ln g$
+\end_inset
+
+, jde zbytek dopočítat protože 
+\begin_inset Formula $dS=\frac{dE}{T}+\frac{p}{T}dV$
+\end_inset
+
+ a 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{1}{T}=(\frac{\partial S}{\partial E})_{V},\,\frac{p}{T}=(\frac{\partial S}{\partial V})_{E}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Gibbsův paradox 
+\end_layout
+
+\begin_layout Standard
+Nerespektování identity částic vede k paradoxu, že spočtená entropie není
+ aditivní.
+\end_layout
+
+\begin_layout Paragraph*
+Dvouatomový plyn
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+c_{V}=5/2Nk_{B}\,...\, c_{p}=7/2Nk_{B}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Chemický potenciál
+\end_layout
+
+\begin_layout Standard
+Systémy s proměnným počtem částic jsou např.
+ pro fázové přechody, chemické reakce a nabíjení přez vodič.
+\end_layout
+
+\begin_layout Standard
+Mějme ideální rezervoár částic, co je schopen dodávat částice o energii
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ (
+\begin_inset Formula $dE=\epsilon\, dN$
+\end_inset
+
+) a zachovat si konstantní entropii.
+ Pak bilance entropie 
+\begin_inset Formula $S(E,N)$
+\end_inset
+
+ vypadá takto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS=(\frac{\partial S}{\partial E})_{N}dE+(\frac{\partial S}{\partial N})_{E}dN=(\frac{\epsilon}{T}+(\frac{\partial S}{\partial N})_{E})dN\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+No a chemický potenciál definujeme jako hodnotu energie, kdy se systém přestane
+ vyvíjet (příjmat další částice) - to bude přesně ve chvíli, kdy závorka
+ bude nulová.
+ Tedy:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+(\frac{\partial S}{\partial N})_{E,V}=-\frac{\mu}{T}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A je vidět 
+\begin_inset Formula $\frac{1}{T}(\epsilon-\mu)dN\geq0$
+\end_inset
+
+, že hodnota 
+\begin_inset Formula $\mu$
+\end_inset
+
+ rozhoduje o příjmání částic.
+\end_layout
+
+\begin_layout Standard
+Jak pak vypadá entropická bilance mezi 2 systémy 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $dS_{tot}=dS_{A}+dS_{B}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ se započtením chemického potenciálu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS_{A}+dS_{B}=(\frac{\partial S_{A}}{\partial E_{A}})_{N_{sA}}\, dE_{A}+(\frac{\partial S_{B}}{\partial E_{B}})_{N_{sB}}dE_{B}+\sum_{s}((\frac{\partial S_{A}}{\partial N_{sA}})_{E_{A},N_{sA}'}dN_{sA}+(\frac{\partial S_{B}}{\partial N_{sB}})_{E_{B},N_{sB}'}dN_{sB})\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Opět z 1VTD známe 
+\begin_inset Formula $(\frac{\partial S_{A}}{\partial E_{A}})_{N_{sA}}=\frac{1}{T_{A}}$
+\end_inset
+
+, což po dosazení spolu s definicí ("derivuju li entropii dle částic, dostanu
+ chemický potenciál") chemického potenciálu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=dS_{tot}=(\frac{1}{T_{A}}-\frac{1}{T_{B}})dE_{A}+\sum_{s}(\frac{\mu_{sB}}{T_{B}}-\frac{\mu_{sA}}{T_{A}})dN_{sA}\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Objevil se mi v bilanci i tok částic.
+ Aby entropie rostla, musí být součet větší než nula.
+ Což může taky znamenat, že se systém vyvíjí proti směru teploty, pokud
+ to chemický potenciál utáhne.
+\end_layout
+
+\begin_layout Standard
+Naopak máme li jen jeden systém, tzn jednu stejnou teplotu, pak to pouze
+ znamená, že 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\sum_{s}\frac{\mu_{sA}}{T_{A}}dN_{s}A\geq0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pro chemii, kde mizí vstupní částice (
+\begin_inset Formula $r$
+\end_inset
+
+ reagující látky) a objevují se produkty (
+\begin_inset Formula $p$
+\end_inset
+
+) znamená tohle:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{r}\mu_{r}dN_{r}\geq\sum_{p}\mu_{p}dN_{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Což je základ chemie, protože určuje směr reakce, 
+\begin_inset Formula $dN_{...}$
+\end_inset
+
+ je v tom případě koeficient z rovnice (počet molů).
+\end_layout
+
+\begin_layout Paragraph*
+Systémy s proměnným počtem částic
+\end_layout
+
+\begin_layout Standard
+Z toho lze i vztahy s chemickými potenciály přidáním úvahy jak to vypadá
+ pro proměnný počet částic - začneme pro diferenciál entropie 
+\begin_inset Formula $S(E,V,N_{s})$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dS=(\frac{\partial S}{\partial E})_{V,\, N}\, dE+(\frac{\partial S}{\partial V})_{E,\, N_{s}}\, dV+\sum_{s}(\frac{\partial S}{\partial N_{s}})_{E,\, V,\, N_{s'}}\, dN_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...členy u diferenciálů jsou po řadě 
+\begin_inset Formula $1/T$
+\end_inset
+
+, 
+\begin_inset Formula $p/T$
+\end_inset
+
+ a 
+\begin_inset Formula $-\mu_{s}/T$
+\end_inset
+
+.
+ Pro diferenciál energie tedy dostaneme (vlastně takové rozšíření 1VTD):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+dE=T\, dS-p\, dV+\sum_{s}\mu_{s}\, dN_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Poslední člen s chemickým potenciálem má tvar/reprezentaci jako teplo, změna
+ objemu v důsledku příchozích částic je započtená v 
+\begin_inset Formula $p\, dV$
+\end_inset
+
+, tenhle reprezentuje další přenesenou energii.
+\end_layout
+
+\begin_layout Standard
+Ostatní termodynamické potenciály 
+\begin_inset Formula $dF,\, dH,\, dG$
+\end_inset
+
+ jdou podobným způsobem rozšířit o člen s chemickým potenciálem (přičtením),
+ což generuje další maxwellovy vztahy (s 
+\begin_inset Formula $\frac{\partial}{\partial N_{s}}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Například z Gibbsovy energie 
+\begin_inset Formula $G(T,\, p,\, N)$
+\end_inset
+
+ máme maxwellův vztah:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\frac{\partial\mu_{s}}{\partial T})_{p,\, N}=-(\frac{\partial S}{\partial N_{s}})_{p,\, T,\, N_{s}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Rovnost 
+\begin_inset Formula $G=\sum_{s}\mu_{s}N_{s}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Z diferenciálních vztahů pro 
+\begin_inset Formula $G$
+\end_inset
+
+ platí:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mu_{s}=(\frac{\partial G}{\partial N_{s}})_{T,\, p,\, N_{s'}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $G$
+\end_inset
+
+ je aditivní, tedy závislý lineárně na 
+\begin_inset Formula $N$
+\end_inset
+
+ a proto je jeho derivace (
+\begin_inset Formula $\nwarrow$
+\end_inset
+
+) konstanta.
+\end_layout
+
+\begin_layout Standard
+A když navíc řekneme, že pro nula částic je energie nulová, pak se pouze
+ násobí 
+\begin_inset Formula $\mu$
+\end_inset
+
+.
+ Uděláme to pro všechny 
+\begin_inset Formula $s$
+\end_inset
+
+ nezávisle a sečteme:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+G=\sum_{s}\mu_{s}N_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%%U 2.
+ otazky mate v rovnici pro G drobnou chybku.
+ Bud nalevo namisto G bude dG nebo napravo namisto dN bude N.
+ Predpokladejme nejprve, ze mame homogenni system.
+ Kdyby to tak nebylo, tak alespon po castech homogenni a uvahu aplikujeme
+ pouze na jednu homogenni cast.
+ Pro dG pak plati dG=SdT+VdP+
+\backslash
+sum_{s}
+\backslash
+mu_{s}dN_{s}.
+ Predstavme si ted, se uvedena diference popisuje zmenu velikosti systemu
+ posunutim jeho hranic, tedy zmenu objemu zahrnuteho do nasi uvahy aniz
+ by se se systemem neco realne delo.
+ V termodynamicke rovnovaze je teplota, tlak a chemicky potencial prostorove
+ konstantni.
+ Tedy dT=0 a dP=0 a mame dG=
+\backslash
+sum_{s}
+\backslash
+mu_{s}dN_{s}.
+ G dostaneme integraci pres N_{s}, coz je pri platnosti 
+\backslash
+mu_{s}=const trivialni.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Zavedení potenciálů s 
+\begin_inset Formula $\mu$
+\end_inset
+
+ jako přirozenou proměnnou
+\end_layout
+
+\begin_layout Standard
+Úpravou odečtením diferenciálu zůstane na pravé straně člen v diferenciálu
+ 
+\begin_inset Formula $\mu$
+\end_inset
+
+: 
+\begin_inset Formula $\mu\, dN-d(\mu N)=+\mu\, dN-\mu\, dN-N\, d\mu$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pro každý potenciál pak vznikne nový:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Phi_{E}=E-\sum_{s}\mu_{s}N_{s}=TS-pV$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+d\Phi_{E}=T\, dS-p\, dV-\sum_{s}N_{s}\, d\mu_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Phi_{F}=F-\sum_{s}\mu_{s}N_{s}=-pV$
+\end_inset
+
+ ...
+ Gibbsův grandkanonický potenciál
+\begin_inset Formula 
+\[
+d\Phi_{F}=-S\, dT-p\, dV-\sum_{s}N_{s}\, d\mu_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Phi_{H}=H-\sum_{s}\mu_{s}N_{s}=TS$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+d\Phi_{H}=T\, dS-V\, dp-\sum_{s}N_{s}\, d\mu_{s}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Phi_{G}=G-\sum_{s}\mu_{s}N_{s}=0$
+\end_inset
+
+ ...
+ Gibbs-Duhemova rovnice (a máme rovnou diferenciální rovnici):
+\begin_inset Formula 
+\[
+d\Phi_{G}=-S\, dT-V\, dp-\sum_{s}N_{s}\, d\mu_{s}=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Zákon působících hmot (mass action law)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{r}R_{r}\mu_{r}=\sum_{p}P_{p}\mu_{p}\textrm{... (čísla v chemické rovnici)}
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Co vchází do rovnice je rovno sumě přez produkty.
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tlak a koncentrace závisí na chemickém potenciálu 
+\begin_inset Formula $p\,\&\, c\sim e^{\frac{\mu}{k_{B}T}}$
+\end_inset
+
+.
+ U plynů tlak reprezentuje koncentraci, což je dobrá aproximace (tlak komponenty
+ plynu závisí na koncentraci).
+\end_layout
+
+\begin_layout Standard
+Lze pak odvodit:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\exp(\frac{1}{k_{B}T}\sum_{r}R_{r}\mu_{r})=\exp(\frac{1}{k_{B}T}\sum_{p}P_{p}\mu_{p})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A zajímá li nás tlak nějaké komponenty (dosazením 
+\begin_inset Formula $p$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+za 
+\begin_inset Formula $\sim e^{\frac{\mu}{k_{B}T}}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\prod_{r}p^{^{R_{r}}}=konst(T)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To je zákon působících hmot pro plyny.
+ Pro kapaliny je tam 
+\begin_inset Formula $c$
+\end_inset
+
+ (místo 
+\begin_inset Formula $p$
+\end_inset
+
+) a je to pouze přibližné.
+\end_layout
+
+\begin_layout Paragraph*
+Odvození gradkanonického Gibbsova rozdělení
+\end_layout
+
+\begin_layout Standard
+Položíme systém 
+\begin_inset Formula $S$
+\end_inset
+
+ do blízkosti rezervoáru dodávajícího částiice a energii (proto grandkanonický).
+ Rezervoár 
+\begin_inset Formula $R$
+\end_inset
+
+ (a systém 
+\begin_inset Formula $S$
+\end_inset
+
+) bude charakterizován konstantními veličinami 
+\begin_inset Formula $T_{R},\, g_{R},\,\mu_{s}$
+\end_inset
+
+.
+ Systém bude nabývat energií 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+, kde 
+\begin_inset Formula $i$
+\end_inset
+
+ indexuje přez všechny stavy systému.
+\end_layout
+
+\begin_layout Standard
+Platí (1.
+ = definice teploty, 2.
+ = definice chemického potenciálu - protože po vynásobení 
+\begin_inset Formula $k_{B}$
+\end_inset
+
+ mám entropii):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\frac{\partial\ln g_{R}}{\partial E_{R}})_{V,\, N_{S}}=\frac{1}{k_{B}T_{R}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(\frac{\partial\ln g_{R}}{\partial N_{s}})_{E_{R},\, V,\, N_{s'}}=\frac{-\mu_{s}}{k_{B}T_{R}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Chci aby rezervoár dodával energii a částice, ale jeho teplota a 
+\begin_inset Formula $\mu$
+\end_inset
+
+ se neměnili.
+ Totéž jako u Boltzmannova rozdělení - ze vztahů pro derivace máme úměrnost:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+g_{R}\sim e^{\frac{E_{R}}{k_{B}T}}\prod_{s}e^{-\frac{\mu_{s}N_{s}}{k_{B}T_{R}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A protože v rovnováze jsou všechny konfigurace stejně pravěpodobné, je pravděpod
+obnost přímo úměrná počtu konfigurací 
+\begin_inset Formula $p_{i}\sim1\cdot g_{R}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Chci to jen s pomocí proměnných systému 
+\begin_inset Formula $E_{tot}=E_{R}+E_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $N_{s,\, tot}=N_{sR}+N_{is}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Protože dochází jen k výměně částic a ne reakcím, platí 
+\begin_inset Formula $E_{tot}=const,\, dE_{tot}=0$
+\end_inset
+
+ a tedy 
+\begin_inset Formula $dE_{R}=-dE_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{i}\sim1\cdot g_{R}\sim e^{\frac{E_{i}}{k_{B}T_{R}}}\prod_{s}e^{-\frac{\mu_{s}N_{si}}{k_{B}T_{R}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+a tedy odvodíme gibbsovo grandkanonické rozdělení - pravděpodobnost počtu
+ částic 
+\begin_inset Formula $N_{s}$
+\end_inset
+
+ s energií 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ za teploty 
+\begin_inset Formula $T$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{i}=\exp(\frac{-1}{k_{B}T}(E_{i}-\sum_{s}\mu_{s}N_{s}))/\Xi
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+S grandkanonickou partiční/stavovou sumou/funkcí:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\Xi=\sum_{N_{s}}\sum_{E_{i}(N_{s})}\exp(\frac{-1}{k_{B}T}(E_{i}(N_{s})-\sum_{s}\mu_{s}N_{s}))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Liší se od klasického Boltzmannova rozdělení tím, že má v exponenciále navíc
+ odečtenou sumu chemických potenciálů.
+ Pro konstantní počet částic se v stavsumě vykrátí a dostaneme Boltzmanovo
+ rozdělení.
+ Platí i u fermionů a bosonů.
+\end_layout
+
+\begin_layout Standard
+Sám systém teplotu nemá, odvozuje se od teploty rezervoáru.
+ 
+\begin_inset Formula $\sum_{E_{i}(N_{s})}$
+\end_inset
+
+ vyjadřuje fakt, že pro každý multiindex 
+\begin_inset Formula $N_{s}$
+\end_inset
+
+ existuje spousta energií a přez ty sčítam - 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $\sum_{N_{s}}$
+\end_inset
+
+ je výčet všech způsobů jak umístit částice.
+\end_layout
+
+\begin_layout Paragraph*
+Liouvillova věta
+\end_layout
+
+\begin_layout Standard
+Fázová kapalina je kapalina tvořená body ve fázovém prostoru (které reprezentují
+ jednotlivé systémy ze statistického souboru systémů).
+ Zavedu 
+\begin_inset Formula $\rho$
+\end_inset
+
+, hustotu bodů fázové kapaliny.
+\end_layout
+
+\begin_layout Standard
+Pokud původní kapaliny splňovaly rovnici kontinuity a hamiltonovy rovnice,
+ splňuje i fázová kapalina rovnici kontinuity (Liouville)!
+\end_layout
+
+\begin_layout Standard
+Proč - jdeme s objemem a koukáme jak se mění:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{d\rho}{dt}=\frac{\partial\rho}{\partial t}+\frac{\partial\rho}{\partial q_{i}}\cdot\dot{\vec{q_{i}}}+\frac{\partial\rho}{\partial p_{i}}\cdot\dot{\vec{p_{i}}}=\underline{\frac{\partial\rho}{\partial t}+\underline{\frac{\partial}{\partial q_{i}}(\rho\dot{\vec{q_{i}}})+\frac{\partial}{\partial p_{i}}(\rho\dot{\vec{p_{i}}})}_{=div\, J}}_{=0}-\rho(\frac{\partial\dot{q_{i}}}{\partial q_{i}}+\frac{\partial\dot{p_{i}}}{\partial p_{i}})=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...doplnili jsme dva členy a odečetli.
+ Teď počet bodů je stále stejný a má-li fázová kapalina vytéct z nějakého
+ objemu, můžou částice vytéct přez stěnu toho objemu: 
+\begin_inset Formula $\frac{\partial\rho}{\partial t}=-div\,\vec{J}$
+\end_inset
+
+, kde 
+\begin_inset Formula $\vec{J}=\vec{v}\cdot\rho$
+\end_inset
+
+ je tok hmoty, resp.
+ bodů a 
+\begin_inset Formula $\vec{v}$
+\end_inset
+
+ jsou rychlosti ve fázoprostoru.
+ Rychlost ve fázovém prostoru má dvě složky - vývoj 
+\begin_inset Formula $q$
+\end_inset
+
+ a 
+\begin_inset Formula $p$
+\end_inset
+
+, proto má divergence právě tenhle tvar.
+\end_layout
+
+\begin_layout Standard
+Nu a v řádce nahoře je podtržená rovnice kontinuity:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\begin_inset Formula 
+\[
+\frac{\partial}{\partial q_{i}}(\rho\dot{\vec{q_{i}}})+\frac{\partial}{\partial p_{i}}(\rho\dot{\vec{p_{i}}})=div\,\vec{J},\,\Rightarrow\,\frac{\partial\rho}{\partial t}+\frac{\partial}{\partial q_{i}}(\rho\dot{\vec{q_{i}}})+\frac{\partial}{\partial p_{i}}(\rho\dot{\vec{p_{i}}})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...tedy z původní rovnosti zbyde pouze poslední závorka.
+ Když si z Hamiltnových kanonických rovnic uvědomíme, že 
+\begin_inset Formula $\dot{q_{i}}=\frac{\partial H}{\partial\vec{p_{i}}}$
+\end_inset
+
+ a 
+\begin_inset Formula $\dot{p_{i}}=\frac{-\partial H}{\partial\vec{q_{i}}}$
+\end_inset
+
+ a dosadíme
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=-\rho(\frac{\partial^{2}H}{\partial p_{i}\partial q_{i}}-\frac{\partial^{2}H}{\partial q_{i}\partial p_{i}})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...kvůli záměnnosti parciálních derivací.
+ Tedy fázová kapalina je nestlačitelná.
+\end_layout
+
+\begin_layout Paragraph*
+Ekvipartiční teorém
+\end_layout
+
+\begin_layout Standard
+Pokud mám ve výrazu proměnnou pouze v druhé mocině, je střední hodnota 
+\begin_inset Formula $1/2k_{B}T$
+\end_inset
+
+ pro systém s pravděpobodnostmi danými boltzmannovým rozdělením.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E=\alpha x^{2}+E'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\bar{E}=1/2k_{B}T+\bar{E'}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Dulong petitův zákon
+\end_layout
+
+\begin_layout Standard
+Kapacita pevné látky je 
+\begin_inset Formula $c=3Nk_{B}$
+\end_inset
+
+, protože střední energie pevné látky je 
+\begin_inset Formula $6N/2k_{B}T$
+\end_inset
+
+, pokud atomy vibrují jako oscilátory.
+\end_layout
+
+\begin_layout Standard
+Plyne z ekvipartičního teorému.
+\end_layout
+
+\begin_layout Paragraph*
+Fázové přechody
+\end_layout
+
+\begin_layout Standard
+Takový proces kdy při změně intenzivní veličiny (tlak/teplota) dojde k velké
+ změně makroskopické veličiny.
+\end_layout
+
+\begin_layout Standard
+Fázový přechod je 
+\begin_inset Formula $n$
+\end_inset
+
+ tého druhu, když je 
+\begin_inset Formula $n$
+\end_inset
+
+ tá derivace gibbsovy energie 
+\begin_inset Formula $G(T,p)$
+\end_inset
+
+ nespojitá.
+ Víc než třetího druhu se nezkoumalo (a blbě se měří).
+\end_layout
+
+\begin_layout Subparagraph*
+Prvního druhu
+\end_layout
+
+\begin_layout Standard
+Přechod pevná/kapalná/plynná.
+ Nespojité jsou 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $S=-(\frac{\partial G}{\partial T})_{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $V=(\frac{\partial G}{\partial p})_{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Druhého druhu
+\end_layout
+
+\begin_layout Standard
+Paramegnetické/feromagnetické a feroelektrické/paraelektrické.
+ Nespojité jsou:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c_{p}=-T(\frac{\partial^{2}G}{\partial T^{2}})_{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\gamma=1/V\frac{\partial^{2}G}{\partial T\partial p}=1/V(\frac{\partial V}{\partial T})_{p}$
+\end_inset
+
+ - izochorická roztažnost
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $k=-1/V\frac{\partial^{2}G}{\partial p^{2}}=-1/V(\frac{\partial V}{\partial p})_{T}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subparagraph*
+Graficky
+\end_layout
+
+\begin_layout Standard
+Kritický bod.
+ V kapalině jako parabola, v plynu jako hyperbola.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename 2014-03-30-1595.jpg
+	lyxscale 10
+	width 40text%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename 2014-03-30-1598.jpg
+	lyxscale 10
+	width 60text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+K fázovému přechodu je potřeba vytvořit fázové rozhraní.
+ To vyžaduje spoustu energie, pokud tam už náhodou není.
+ Pokud není, tak zůstává ve fázi energeticky nevýhodný - metastabilní stav.
+\end_layout
+
+\begin_layout Standard
+Metastabilní stav čeká na fluktuaci (např.
+ přesycená pára).
+ Nebo na kondenzační zárodky.
+ Proto funguje mj.
+ i bublinková mlžná komora.
+\end_layout
+
+\begin_layout Standard
+Trojný bod - podmínka (na teplotu), kdy můžou existovat všechny tři fáze.
+\end_layout
+
+\begin_layout Paragraph*
+Vícesložkové systémy a fázové přechody
+\end_layout
+
+\begin_layout Paragraph*
+Gibbsovo fázové pravidlo
+\end_layout
+
+\begin_layout Standard
+Mějme systém tvořený 
+\begin_inset Formula $n$
+\end_inset
+
+ složkami/komponentami nacházející se v 
+\begin_inset Formula $r$
+\end_inset
+
+ fázích.
+ Kolik fází maximálně se může najednou vyskytovat?
+\end_layout
+
+\begin_layout Standard
+Vyskytuje li se systém v 
+\begin_inset Formula $r$
+\end_inset
+
+ fázích najednou, musí se rovnat chemické potenciály pro každou komponentu.
+ 
+\end_layout
+
+\begin_layout Standard
+To je 
+\begin_inset Formula $n(r-1)$
+\end_inset
+
+ rovnic, musíme mít dost volných parametrů systému, co mi umožní tohle nezávisle
+ ladit.
+ Kolik je těch parametrů - 
+\begin_inset Formula $\mu_{n}^{(r)}(T,p,c_{1}^{(r)}...c_{n-1}^{(r)})$
+\end_inset
+
+ -
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mu_{1}^{(1)}=...=\mu_{1}^{(r)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+...
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mu_{n}^{(1)}=...=\mu_{n}^{(r)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...celkem 
+\begin_inset Formula $2+r(n-1)$
+\end_inset
+
+ vs 
+\begin_inset Formula $n(r-1)$
+\end_inset
+
+ rovnic, řešitelné pokud proměnných víc než rovnic, tedy 
+\begin_inset Formula $2+n\geq r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Pozn.
+ Eutektický diagram, fázový diagram binárního systému.
+ Pomocí linií fázových přechodů je možné čistit směsi.
+\end_layout
+
+\begin_layout Paragraph*
+Rychlost šíření zvuku v plynu
+\end_layout
+
+\begin_layout Standard
+Předpokládáme li slabý zvuk (malé výchylky), nemalý tlak, pak lze z vlnové
+ rovnice dostat 
+\begin_inset Formula $c=\frac{\kappa k_{B}T}{M}$
+\end_inset
+
+.
+ Kappa je konstanta z adiabatického děje, 
+\begin_inset Formula $M$
+\end_inset
+
+ hmotnost jedné částice.
+\end_layout
+
+\begin_layout Paragraph*
+Přímou integrací z rozdělení odvodit stavovou rovnici ideálního plynu
+\end_layout
+
+\begin_layout Standard
+Rozdělení které použijeme bude Maxwell-Boltzmannovo (pro hybnosti, resp.
+ polohy):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{MB}(p,r)=p_{M}(p)\cdot p_{B}(r)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Maxwellovo rozdělení je hustota pravděpodobnosti, že změřím částice s hybností
+ 
+\begin_inset Formula $p$
+\end_inset
+
+ (a jako počet částic v nějakém objemu vezmeme 
+\begin_inset Formula $p_{B}=N/V$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p_{M}(\vec{p})=(2\pi mk_{B}T)^{-3/2}\exp(\frac{-p^{2}}{2mk_{B}T})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tohle rozdělení použijeme k dosazení dále.
+ Hlavní fyzikální úvaha je nicméně následující:
+\end_layout
+
+\begin_layout Standard
+Tlak na hranici (kolmé na směr 
+\begin_inset Formula $x$
+\end_inset
+
+) jistého objemu je daný silou narážejících částic impulzem síly 
+\begin_inset Formula $2p_{x}=F\delta t$
+\end_inset
+
+.
+ Jaké částice tam můžou přiletět? Jen ty co to stihnou za 
+\begin_inset Formula $\delta t$
+\end_inset
+
+ a jen ty co se nacházejí v objemu daném plochou 
+\begin_inset Formula $S$
+\end_inset
+
+ a výškou 
+\begin_inset Formula $v_{x}=p_{x}/m$
+\end_inset
+
+.
+ Fluktuace bereme, že se ve střední hodnotě vyruší a protože je plyn homogenní,
+ tak částice co přiletí šíkmo jsou započítány také (za každou co přiletí
+ šikmo odjinud do objemu jedna vyletí šikmo z objemu jinam).
+\end_layout
+
+\begin_layout Standard
+Vezmeme tedy hranici kolmou na směr 
+\begin_inset Formula $x$
+\end_inset
+
+, o ploše 
+\begin_inset Formula $S$
+\end_inset
+
+, síla je dána takto:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+PS=\frac{p_{x}}{m}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...doadíme úvahu o částicích způsobujících impuls síly (s pomocí vztahu pro
+ impulz síly):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+PS=\iiint_{\begin{array}{c}
+p_{x}\geq0\\
+p_{y,p_{z}\in\mathbb{R}}
+\end{array}}\frac{Sv_{x}\delta t}{V}\frac{2p_{x}}{\delta t}p_{M}(p)\, dp_{x}\, dp_{y}\, dp_{z}=
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...první zlomek vyjadřuje jestli se částice nachází v dané části objemu kde
+ může do stěny narazit, druhý zlomek vyjadřuje sílu (hybnost dělená časem
+ - díky tomu se 
+\begin_inset Formula $\delta t$
+\end_inset
+
+ vykrátí) a 
+\begin_inset Formula $p_{M}$
+\end_inset
+
+ je maxwellovo rozdělení hybností.
+ Po vyintegrování dostaneme:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+=\frac{2SN\sqrt{\pi}}{4Vm\sqrt{2\pi mk_{B}T}}(2mk_{B}T)^{3/2}=S\frac{k_{B}T}{V}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+...což po vykrácení 
+\begin_inset Formula $S$
+\end_inset
+
+ dá:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+PV=Nk_{B}T
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Chemický potenciál ideálního plynu
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mu=k_{B}T\ln(\frac{N}{V}(\frac{2\pi\hbar^{2}}{mk_{B}T})^{3/2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Raoultův zákon
+\end_layout
+
+\begin_layout Standard
+Mikroskopický zákon o celkovém tlaku jako součtu tlaků složek násobeno koncentra
+cí:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+p=\sum_{i}p_{i}x_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Duhem-margules rovnice
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sum_{s}x_{s}d(\ln P_{S})=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Osmotický tlak
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\mathbb{T}=\frac{-k_{B}T}{v}\ln x_{1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Závisí na logaritmu složení.
+\end_layout
+
+\end_body
+\end_document

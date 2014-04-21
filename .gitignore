@@ -1,0 +1,15 @@
+*.*~
+*.~*
+*.pdf
+*.sync*
+*.bcf
+*.aux
+*.tips
+*.blg
+*.bbl
+*.bak
+*.exe
+*.kldx
+*.tldx
+*.toc
+*.log
