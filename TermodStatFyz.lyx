@@ -5675,5 +5675,27 @@ Osmotický tlak
 Závisí na logaritmu složení.
 \end_layout
 
+\begin_layout Section*
+Poznámky
+\end_layout
+
+\begin_layout Paragraph*
+GIT
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+https://github.com/Darthholi/TermodynStatFyz
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \end_body
 \end_document
